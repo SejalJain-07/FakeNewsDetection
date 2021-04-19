@@ -8,7 +8,8 @@ app = Flask(__name__)
 saved_covid_lstm = load_model('bidirectiona-lstm-model.h5')
 max_features=33000
 tokenizer = Tokenizer(num_words = max_features, filters='!"#$%&()*+,-./:;<=>?@[\\]^_`{|}~\t\n', lower = True, split = ' ')
-
+result=""
+lstm_prediction=None
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -21,11 +22,11 @@ def prediction():
     test_text = tokenizer.texts_to_sequences(texts = [news])
     test_text = pad_sequences(sequences = test_text, maxlen = max_features, padding = 'pre')
     lstm_prediction = saved_covid_lstm.predict_classes(test_text)
-    if lstm_prediction == 1:
-        result = "News is true"
+    if lstm_prediction == 0:
+        result = "News is fake"
     else:
-        result = "News is false"
-    return render_template('index.html', text_data=result)
+        result = "News is true"
+    return render_template('index.html', text_data=lstm_prediction)
 
 
 app.run(port=6060, debug=True)
