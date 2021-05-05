@@ -113,9 +113,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<i>Author</i>
 								<input type="text" name="Subject" placeholder="Enter author of news " required="">
 							</span>
-							<input type="submit" value="SUBMIT">
-							alert({{text_data}})
-
+							<!--input type="submit" value="SUBMIT" onclick="myFunction()"!-->
+							<!--alert({{text_data}})-->
+							<button onclick="myFunction()">Predict</button>
 						</form>
 					</div>
 				</div>
@@ -189,6 +189,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			}
 		  });
 		});
+	
+	function myFunction() {
+		if text_data == 0
+			alert("Real News");
+		else
+			alert("Fake News");
+	}
   </script>
 <!-- //flexSlider -->
 
