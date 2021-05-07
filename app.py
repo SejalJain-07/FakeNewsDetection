@@ -26,7 +26,10 @@ def prediction():
         result = "News is fake"
     else:
         result = "News is true"
-    return render_template('index.html', text_data=lstm_prediction)
+    return render_template('index.html', text_data=result)
 
+@app.route('/services')
+def services():
+    return render_template('services.html')
 
 app.run(port=6060, debug=True)
