@@ -22,11 +22,26 @@ def prediction():
     test_text = tokenizer.texts_to_sequences(texts = [news])
     test_text = pad_sequences(sequences = test_text, maxlen = max_features, padding = 'pre')
     lstm_prediction = saved_covid_lstm.predict_classes(test_text)
-    if lstm_prediction == 0:
+    """if lstm_prediction == 1 :
         result = "News is fake"
     else:
-        result = "News is true"
-    return render_template('index.html', text_data=result)
+        result = "News is true" """ 
+    
+    """pred=sum(lstm_prediction)"""
+    
+    """pred=pred/2"""
+    
+    """for i in range(len(lstm_prediction)):
+        if lstm_prediction[i].item() >= 0.5:
+            result.append(1)
+        else:
+            result.append(0)"""
+    """if pred >= 0.5:
+        result.append(1)
+    else:
+        result.append(0)"""
+        
+    return render_template('index.html', text_data=lstm_prediction)
 
 @app.route('/services')
 def services():
