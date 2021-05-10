@@ -1,8 +1,7 @@
-from flask import Flask, render_template, request
+from flask import Flask,flash, render_template, request
 from tensorflow.keras.models import  load_model
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
-import sys
 
 app = Flask(__name__, template_folder='templates')
 
@@ -24,10 +23,10 @@ def prediction():
     test_text = pad_sequences(sequences = test_text, maxlen = max_features, padding = 'pre')
     print(test_text) 
     lstm_prediction = saved_covid_lstm.predict_classes(test_text)
-    """if lstm_prediction == 1 :
+    if lstm_prediction == 1 :
         result = "News is fake"
     else:
-        result = "News is true" """ 
+        result = "News is true"  
     
     """pred=sum(lstm_prediction)"""
     
@@ -41,9 +40,8 @@ def prediction():
     """if pred >= 0.5:
         result.append(1)
     else:
-        result.append(0)"""
-        
-    return render_template('index.html', text_data=lstm_prediction)
+        result.append(0)"""   
+    return render_template('index.html', text_data=result)
 
 @app.route('/services')
 def services():

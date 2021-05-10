@@ -118,7 +118,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</span>
 							<!--input type="submit" value="SUBMIT"-->
 							
-							<button onclick="myFunction(text_data)">Predict</button>
+							<button type="reset" style="background: #eb5424;border-color: #eb5424;border-radius: 0px;float: right; color:#fff;margin:5px" onclick="window.location='{{url_for('index')}}'">Reset</button>
+							<button onclick="myFunction(text_data)" style="background: #00ba66;border-color: #00ba66;border-radius: 0px;float: right; color:#fff;margin:5px">Predict</button>
 							<!--alert({{text_data}})-->
 						</form>
 						<br>
@@ -133,14 +134,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //mail -->
 
 <!-- services -->
-	<div class="services two">
+	<div class="services two" style="padding-bottom:40px; padding-top:0px;">
 		<div class="container">
-			<h3 class="w3l_header w3_agileits_header">Fake News Detection <span>System</span></h3>
+			<!--h3 class="w3l_header w3_agileits_header">Fake News Detection <span>System</span></h3-->
+			
 			<div class="wthree_services_grids">	
 				<div class="col-md-12 wthree_services_grid_left">
-					<h3>About <span>Fake</span> News</h3>
+					<h3 style="text-align:center; margin:auto;">About <span>Fake</span> News</h3>
 					<!--h4>Choose your course</h4-->
-					<p> Fake news detection is the task of detecting forms of news consisting of deliberate disinformation or hoaxes spread via traditional news media (print and broadcast) or online social media.</p>					
+					<p style="text-align:center; margin:auto;"> Fake news detection is the task of detecting forms of news consisting of deliberate disinformation or hoaxes spread via traditional news media (print and broadcast) or online social media. In this system we take input from the user and process the input data. User will give input as news text, title, author and click on Check button. Then system will predict whether that particular news article is fake or real. After collecting text from user:  text will be converted to lower case.  Then the URLs, brackets, stopwords will be removed. Then the processed data will be tokenized and will be converted into sequence number in the form of vectors. These vectors will then be fed to the deep learning trained model to predict result.
+					</p>					
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -152,13 +155,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="footer">
 	<div class="f-bg-w3l">
 		<div class="container">
-			<div class="col-md-4 w3layouts_footer_grid">
+			<!--div class="col-md-4 w3layouts_footer_grid">
 				<h2>Follow <span>Us</span></h2>
 				<ul class="social_agileinfo">
 					<li><a href="#" class="w3_google"><i class="fa fa-google-plus"></i></a></li>
 				</ul>
-			</div>
-			<div class="col-md-8 w3layouts_footer_grid">
+			</div-->
+			<div class="col-md-12 w3layouts_footer_grid" style="text-align:center;">
 				<ul class="w3l_footer_nav">
 					<li><a href="{{url_for('index')}}" class="active">Home</a></li>
 					<li><a href="{{url_for('services')}}">FAQ</a></li>
