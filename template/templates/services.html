@@ -42,105 +42,44 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 					<nav class="menu--iris">
 						<ul class="nav navbar-nav menu__list" style="text-align:center;">
-							<li class="menu__item menu__item--current"><a href="{{url_for('index')}}" class="menu__link">Home</a></li>
-							<li class="menu__item"><a href="{{url_for('services')}}" class="menu__link">FAQ</a></li>
+							<li class="menu__item"><a href="{{url_for('index')}}" class="menu__link">Home</a></li>
+							<li class="menu__item menu__item--current"><a href="{{url_for('services')}}" class="menu__link">FAQ</a></li>
 					</nav>
 				</div>
 			</nav>
 		</div>
 </div>
-<!-- banner -->
 	<div class="banner1">
+			
 		<div class="w3_agileits_service_banner_info">
-			<h2><span style="background-color:rgba(255,255,255,0.5);">Fake News Detection</span></h2>
+			<h2>FAQ</h2>
 		</div>
 	</div>
-
 <!-- //banner -->
-<!-- mail -->
-	<div class="contact">
-		<div class="container">
-			<h3 class="w3l_header w3_agileits_header1">News:<span> Fake or Real ?</span></h3>
-			<div style="height:50px;"></div>
-			<h4 style="text-align:center;"><b>Follow the steps below to check the authenticity of the News.</b></h4>
-			<hr>
-			<div class="w3layouts_mail_grid">
-				<div class="col-md-4 w3layouts_mail_grid_left">
-					<div class="w3layouts_mail_grid_left1 hvr-radial-out">
-						<span class="fa fa-stack-5x" aria-hidden="true">1</span>
-					</div>
-					<div class="w3layouts_mail_grid_left2">
-						<h3>Input</h3>
-						<p>Enter Title, Text & Author</p>
-					</div>
-				</div>
-				<div class="col-md-4 w3layouts_mail_grid_left">
-					<div class="w3layouts_mail_grid_left1 hvr-radial-out">
-						<span class="fa fa-stack-5x" aria-hidden="true">2</span>
-					</div>
-					<div class="w3layouts_mail_grid_left2">
-						<h3>Predict</h3>
-						<p>Submit the input</p>
-					</div>
-				</div>
-				<div class="col-md-4 w3layouts_mail_grid_left">
-					<div class="w3layouts_mail_grid_left1 hvr-radial-out">
-						<span class="fa fa-stack-5x" aria-hidden="true">3</span>
-					</div>
-					<div class="w3layouts_mail_grid_left2">
-						<h3>Result</h3>
-						<p>Fake/Real News</p>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-
-	<div class="contact" style="padding:0px;">
-		<div class="container">
-			<h3 class="w3l_header w3_agileits_header1">News <span>Info</span></h3>
-			<div class="w3layouts_mail_grid">
-					<div class="agileits_mail_grid_right agileits_w3layouts_mail_grid_right">
-					<div class="agileits_mail_grid_right1 agile_mail_grid_right1">
-						<form action="{{url_for('prediction')}}", method="POST">
-							<span>
-								<i>Title</i>
-								<input type="text" name="Name" placeholder="Enter title of news" required="">
-							</span>
-							<span>
-								<i>Text</i>
-								<textarea type="text" name="Message" placeholder="Enter text of news" required=""></textarea>
-							</span>
-							<span>
-								<i>Author</i>
-								<input type="text" name="Subject" placeholder="Enter author of news " required="">
-							</span>
-							<!--input type="submit" value="SUBMIT"-->
-							
-							<button onclick="myFunction(text_data)">Predict</button>
-							<!--alert({{text_data}})-->
-						</form>
-						<br>
-						<br>
-						{{ text_data }}
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-<!-- //mail -->
 
 <!-- services -->
 	<div class="services two">
 		<div class="container">
-			<h3 class="w3l_header w3_agileits_header">Fake News Detection <span>System</span></h3>
+			<!--h3 class="w3l_header w3_agileits_header">What is <span>Fake News ?</span></h3-->
 			<div class="wthree_services_grids">	
-				<div class="col-md-12 wthree_services_grid_left">
-					<h3>About <span>Fake</span> News</h3>
+				<div class="col-md-6 wthree_services_grid_left">
+					<!--h3>About <span>Fake</span> News</h3-->
 					<!--h4>Choose your course</h4-->
-					<p> Fake news detection is the task of detecting forms of news consisting of deliberate disinformation or hoaxes spread via traditional news media (print and broadcast) or online social media.</p>					
+					<p><b>The page or prediction got stuck on initializing.</b></p>
+					<p>Please delete your browser cache. Restart your browser and try again. If it still does not work, please try to use another browser. <!--If the conversion still gets stuck, please send us a message using our contact form with the video URL and your chosen format.--></p>
+					
+					<p><b>How to check whether any news is real or fake ?</b></p>
+					<p>Enter the required news info and click on Check button, the Machine learning model will validate the prediction.</p>
+					
+					<p><b>Where can we see the news validation output of real or fake ?</b></p>
+					<p>You can see it just below the prediction button.</p>
+				</div>
+				<div class="col-md-6 wthree_services_grid_left">
+					<p><b>I am getting an error message.</b></p>
+					<p>This can be due to mutiple reasons. Please be sure: • you have entered the title of the news • you have entered the text of the news • you have entered the author/source of the news correctly.</p>
+					
+					<p><b>Are title,text and author are compulsory fields ?</b></p>
+					<p>Yes, Title,text and author are compulsory fields.</p>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -153,12 +92,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="f-bg-w3l">
 		<div class="container">
 			<div class="col-md-4 w3layouts_footer_grid">
-				<h2>Follow <span>Us</span></h2>
+				<!--h2>Follow <span>Us</span></h2>
 				<ul class="social_agileinfo">
+					<li><a href="#" class="w3_facebook"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#" class="w3_twitter"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#" class="w3_instagram"><i class="fa fa-instagram"></i></a></li>
 					<li><a href="#" class="w3_google"><i class="fa fa-google-plus"></i></a></li>
-				</ul>
+				</ul-->
 			</div>
 			<div class="col-md-8 w3layouts_footer_grid">
+				<!--form action="#" method="post">
+					<input type="email" name="Email" placeholder="Email..." required="">
+					<input type="submit" value="">
+				</form-->
 				<ul class="w3l_footer_nav">
 					<li><a href="{{url_for('index')}}" class="active">Home</a></li>
 					<li><a href="{{url_for('services')}}">FAQ</a></li>
@@ -170,30 +116,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 </div>
 <!-- //footer -->
-<!-- start-smoth-scrolling -->
 <!-- js -->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 <!-- //js -->
-<script src="js/JiSlider.js"></script>
-debugger;
-<script>
-			$(window).load(function () {
-				$('#JiSlider').JiSlider({color: '#fff', start: 3, reverse: true}).addClass('ff')
-			})
-		</script><script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36251023-1']);
-  _gaq.push(['_setDomainName', 'jqueryscript.net']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 <!-- stats -->
 	<script src="js/jquery.waypoints.min.js"></script>
 	<script src="js/jquery.countup.js"></script>
@@ -201,7 +126,6 @@ debugger;
 			$('.counter').countUp();
 		</script>
 <!-- //stats -->
-<!-- //footer -->
 <!-- flexSlider -->
 	<script defer src="js/jquery.flexslider.js"></script>
 	<script type="text/javascript">
@@ -213,14 +137,10 @@ debugger;
 			}
 		  });
 		});
-	
-	function myFunction(text_data) {
-		alert(text_data);
-	}
   </script>
 <!-- //flexSlider -->
 
-
+<!-- start-smoth-scrolling -->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">

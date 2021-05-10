@@ -1099,7 +1099,7 @@ button.close {
 /*-- //to-top --*/
 /*-- services --*/
 .banner1 {
-    background: url(../images/wall.jpg) no-repeat 0px 0px;
+    background: url(../images/wall3.jpg) no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1110,7 +1110,7 @@ button.close {
 .w3_agileits_service_banner_info h2 {
     text-align: center;
     font-size: 2.3em;
-    color: #fff;
+    color: rgba(0,0,0,0.8);
     padding-top: 3em;
     text-transform: uppercase;
     letter-spacing: 5px;
